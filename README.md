@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Foodie FOMO
 
-## Getting Started
+A location-aware foodie app built with Next.js that helps users discover nearby restaurants, view a map for the nearest recommendation, and see one special dish from each place.
 
-First, run the development server:
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deploy for free (recommended: Vercel)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Option 1: One-click deploy
 
-## Learn More
+Use the button below after pushing this repo to GitHub.
 
-To learn more about Next.js, take a look at the following resources:
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-username/your-repo-name)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+> Replace `your-username/your-repo-name` with your real GitHub repository path.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Option 2: Vercel dashboard (no CLI required)
 
-## Deploy on Vercel
+1. Create a free account at [vercel.com](https://vercel.com).
+2. Click **Add New → Project**.
+3. Import this GitHub repository.
+4. Keep default settings (Framework: **Next.js**).
+5. Click **Deploy**.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Vercel will give you a free live URL like:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+`https://foodie-fomo-yourname.vercel.app`
+
+### Option 3: Vercel CLI
+
+```bash
+npm i -g vercel
+vercel
+vercel --prod
+```
+
+## Notes
+
+- The app uses browser geolocation. If location permission is denied, it falls back to default restaurant ordering.
+- The embedded map uses OpenStreetMap, so no paid API key is required.
+
+## Tech stack
+
+- Next.js (App Router)
+- React + TypeScript
+- Tailwind CSS
